@@ -1,11 +1,11 @@
-def map (array)
- map_arr = []
-
-array.each do |x|
-	map_arr.push(yield x)
- end
-
- return map_arr
+def map (source)
+	new = []
+	i = 0
+	while i < source.length do
+		new.push(yield(source[i]))
+		i += 1
+	end
+	return new
 end
 
 def reduce (array, starting_point = 0)
