@@ -8,12 +8,11 @@ def map (source)
 	return new
 end
 
-def reduce (array, starting_point = 0)
-  i = 0
+def reduce (array, memo = array[0])
+	i = 0
 	while i < array.length do
 		memo = yield(memo, array[i])
 		i += 1
-  end
-  
+	end
 	return memo
 end
