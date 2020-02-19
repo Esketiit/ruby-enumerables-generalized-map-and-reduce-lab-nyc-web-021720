@@ -9,7 +9,9 @@ def map (source)
 end
 
 def reduce (array, memo = array[0])
-	i = 1
+	i = 0
+	if array[0] = memo {i = 1}
+	
 	while i < array.length do
 		memo = yield(memo, array[i])
 		i += 1
