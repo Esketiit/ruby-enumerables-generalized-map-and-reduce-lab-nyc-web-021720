@@ -9,15 +9,11 @@ def map (source)
 end
 
 def reduce (array, starting_point = 0)
-  sum = starting_point
-
-  array.each do |value|
-    sum = yield(sum, value)
-
-    if (!value)
-      return false
-    end
+  i = 0
+	while i < array.length do
+		memo = yield(memo, array[i])
+		i += 1
   end
-
-  return sum
+  
+	return memo
 end
