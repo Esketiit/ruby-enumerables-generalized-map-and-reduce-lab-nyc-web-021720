@@ -10,7 +10,9 @@ end
 
 def reduce (array, memo = array[0])
 	i = 0
-	if array[0] == memo do {i = 1}
+	if array[0] == memo 
+	  i = 1  
+	end
 	
 	while i < array.length do
 		memo = yield(memo, array[i])
